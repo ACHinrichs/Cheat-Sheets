@@ -7,9 +7,9 @@
 \usepackage{color,graphicx,overpic}
 \usepackage{hyperref}
 \usepackage{listings}
+\usepackage{xtab}
 
 \lstset{
-  frame = single,
   breaklines = true,
   postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookrightarrow\space}},
 }
@@ -38,7 +38,7 @@
 
 % Redefine section commands to use less space
 \makeatletter
-\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+\renewcommand{\section}{\hrule\@startsection{section}{1}{0mm}%
                                 {-1ex plus -.5ex minus -.2ex}%
                                 {0.5ex plus .2ex}%x
                                 {\normalfont\large\bfseries}}
@@ -89,6 +89,18 @@
 
 Wenn nur eine \texttt{.tex}-Datei im Verzeichniss vorhanden ist, kann \texttt{\$TEX-FILE}%$
 weggelassen werden\\
+\subsection{lstlistings}
+Inlinelistings with
+\begin{lstlisting}[language=tex]
+\lstinline{<Code>}
+\end{lstlisting}
+\section{EMACS--Commands}
+\begin{xtabular}{rl}
+  Open File (new or existing) & C-x C-f\\
+  Save file & C-x C-s\\
+  Save file as & C-x C-w\\
+  Toogle Read-Only-Mode &C-x C-q\\
+\end{xtabular}
 \section{Jekyll}
 \subsection{Jekyll starten}
 \begin{lstlisting}[language=bash]
