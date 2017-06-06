@@ -8,6 +8,7 @@
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{xtab}
+\usepackage{csquotes}
 
 \lstset{
   breaklines = true,
@@ -94,6 +95,14 @@ Inlinelistings with
 \begin{lstlisting}[language=tex]
 \lstinline{<Code>}
 \end{lstlisting}
+\subsection{Other commands}
+\enquote{Splitted} Footnotes (for use in eg. Math-Environments)
+\begin{lstlisting}[language=tex]
+  \footnotemark % Prints the mark
+  
+  \footnotetext{#1} %Appends the text to the footnote
+\end{lstlisting}
+
 \section{EMACS--Commands}
 \begin{xtabular}{rl}
   Open File (new or existing) & C-x C-f\\
