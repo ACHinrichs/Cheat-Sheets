@@ -3,6 +3,7 @@
 \usepackage{calc}
 \usepackage{listings}
 \usepackage{xtab}
+\usepackage{csquotes}
 
 \lstset{
   breaklines = true,
@@ -38,12 +39,22 @@ Inlinelistings with
 \begin{lstlisting}[language=tex]
 \lstinline{<Code>}
 \end{lstlisting}
+\subsection{Other commands}
+\enquote{Splitted} Footnotes (for use in eg. Math-Environments)
+\begin{lstlisting}[language=tex]
+  \footnotemark % Prints the mark
+  
+  \footnotetext{#1} %Appends the text to the footnote
+\end{lstlisting}
+
 \section{EMACS--Commands}
 \begin{xtabular}{rl}
   Open File (new or existing) & C-x C-f\\
   Save file & C-x C-s\\
   Save file as & C-x C-w\\
   Toogle Read-Only-Mode &C-x C-q\\
+  \\
+  Change Encoding & C-x RET r \texttt{<ENCODING>}\\
 \end{xtabular}
 \section{Jekyll}
 \subsection{Jekyll starten}
@@ -92,8 +103,5 @@ Code-Blocks:
 \begin{lstlisting}
   [Display Text]({{ site.baseurl }}/pfad/zur/datei.html)
 \end{lstlisting}
-% You can even have references
-\rule{0.3\linewidth}{0.25pt}
-\scriptsize
 \end{multicols}
 \end{document}
