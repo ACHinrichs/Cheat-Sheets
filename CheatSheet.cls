@@ -37,7 +37,7 @@
 %% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 %% SOFTWARE.
 \def\fileversion{v0.1}
-\def\filedate{2017/06/23}
+\def\filedate{2017/07/04}
 \NeedsTeXFormat{LaTeX2e}[2005/12/01]
 \ProvidesClass{CheatSheet}[\filedate\space\fileversion]
 \RequirePackage{kvoptions}
@@ -55,6 +55,11 @@
 \PassOptionsToPackage{fleqn}{amsmath}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
+\RequirePackage{multicol}
+\RequirePackage{calc}
+\RequirePackage{xtab}
+\PassOptionsToPackage{autostyle,german=guillemets}{csquotes}
+\RequirePackage{csquotes}
 
 \RequirePackage{xcolor}
 \definecolor{primaryColor}{cmyk}{1,.72,0,.38}
@@ -71,7 +76,12 @@
 \RequirePackage{etoolbox}
 \pagestyle{empty}
 \setcounter{secnumdepth}{0}
-
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+\AtBeginDocument{
+  \raggedright
+  \footnotesize
+}
 \RequirePackage{geometry}
 \geometry{top=1cm, bottom=1cm, left=1cm,
   headsep=14pt,hmarginratio={1:1}}
