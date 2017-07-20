@@ -10,28 +10,34 @@
   \setlength{\multicolsep}{1pt}
   \setlength{\columnsep}{2pt}
   \maketitle
-  \section{\LaTeX}
-  \subsubsection{\LaTeX{}mk}
+  \section{\LaTeX--Tools}
+  \subsection{\LaTeX{}mk}
   \begin{lstlisting}[language=bash]
-    $ latexmk -pvc -pdf -interaction=nonstopmode \$TEX-FILE
+    $ latexmk -pvc -pdf -interaction=nonstopmode $TEX-FILE
   \end{lstlisting} % $ %Hack for Math-highlighting
   
   Wenn nur eine \texttt{.tex}-Datei im Verzeichniss vorhanden ist, kann \texttt{\$TEX-FILE}%$
   weggelassen werden\\
+  \subsection{tlmgr}
+  Um Pakete unter TexLive zu installieren
+  \begin{lstlisting}
+     # tlmgr install $PACKET
+  \end{lstlisting} % $ %Hack for Math-highlighting
+  \section{\LaTeX--Syntax}
   \subsection{lstlistings}
-Inlinelistings with
-\begin{lstlisting}[language=tex]
-\lstinline{<Code>}
-\end{lstlisting}
-\subsection{Other commands}
-\enquote{Splitted} Footnotes (for use in eg. Math-Environments)
-\begin{lstlisting}[language=tex]
-  \footnotemark % Prints the mark
+  Inlinelistings with
+  \begin{lstlisting}[language=tex]
+    \lstinline{<Code>}
+  \end{lstlisting}
+  \subsection{Other commands}
+  \enquote{Splitted} Footnotes (for use in eg. Math-Environments)
+  \begin{lstlisting}[language=tex]
+    \footnotemark % Prints the mark
+    
+    \footnotetext{#1} %Appends the text to the footnote
+  \end{lstlisting}
   
-  \footnotetext{#1} %Appends the text to the footnote
-\end{lstlisting}
-
-\section{EMACS--Commands}
+  \section{EMACS--Commands}
 \begin{xtabular}{rl}
   Open File (new or existing) & C-x C-f\\
   Save file & C-x C-s\\
