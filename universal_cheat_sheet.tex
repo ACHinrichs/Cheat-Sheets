@@ -1,14 +1,15 @@
 \documentclass[10pt,landscape,a4paper]{CheatSheet}
 \usepackage[ngerman]{babel}
+\usepackage{float}
 \title{Universal Cheat-Sheet} 
 \author{A. C. Hinrichs\\\texttt{adrian.hinrichs@rwth-aachen.de}}
 \date{\today}
 \begin{document}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
 \begin{multicols}{4}
-  \setlength{\premulticols}{1pt}
-  \setlength{\postmulticols}{1pt}
-  \setlength{\multicolsep}{1pt}
-  \setlength{\columnsep}{2pt}
   \maketitle
   \section{\LaTeX}
   \subsubsection{\LaTeX{}mk}
@@ -87,5 +88,44 @@ Code-Blocks:
 \begin{lstlisting}
   [Display Text]({{ site.baseurl }}/pfad/zur/datei.html)
 \end{lstlisting}
+\section{Screen}
+\subsection{Tastaturbefehle}
+Funktionierne in einer Sitzung:
+\begin{table}[H]
+  \footnotesize
+  \begin{xtabular}{rl}
+    Ein neues Fenster öffnen& C-a-c\\
+    Zwischen Fenstern wechseln& C-a-SPC\\
+    Sitzung Trennen & C-a-d\\
+  \end{xtabular}
+\end{table}
+\subsection{Shell-Kommandos}
+Funktionieren ausserhalb von Sitzungen\\
+Zum start einer neuen Sitzung mit dem Namen \texttt{sitzung1}:
+\begin{lstlisting}
+  $ screen -S sitzung1
+\end{lstlisting}%$
+Zu wiederaufnehmen der Sitzung \texttt{\$SITZUNG}:%$
+\begin{lstlisting}
+  $ screen -r $SITZUNG
+\end{lstlisting}%$
+Wenn nur eine Sitzung im hintergrund läuft kann der Sitzungsname weg
+gelassen werden.\\
+Zum auflisten aller Sitzungen:
+\begin{lstlisting}
+ $ screen -ls 
+\end{lstlisting}%$
+Zum trennen einer (nicht geöffneten) Sitzung \texttt{\$SITZUNG}:
+\begin{lstlisting}
+ $ screen -d $SITZUNG
+\end{lstlisting}
+Spiegeln der Sitzung \texttt{\$SITZUNG}:
+\begin{lstlisting}
+ $ screen -rx $SITZUNG
+\end{lstlisting}
+Einen Befehl an die Sitzung \texttt{\$SITZUNG} senden und ausführen:
+\begin{lstlisting}
+ $ screen -S $SITZUNG -X stuff $'ls -l\n'
+\end{lstlisting}%$
 \end{multicols}
 \end{document}
