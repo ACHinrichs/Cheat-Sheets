@@ -11,5 +11,20 @@
   \begin{lstlisting}[language=bash]
     $ git config --global help.autocorrect 50
   \end{lstlisting}%$
+
+  \section{Gnome}
+  \subsection{Smaller Titlebars}
+  Add to \lstinline{~./config/gtk-3.0/gtk.css}:
+  \begin{lstlisting}
+    .header-bar.default-decoration {
+      padding-top: 3px;
+      padding-bottom: 3px;
+      font-size: 0.8em;
+    }
+    
+    .header-bar.default-decoration .button.titlebutton {
+      padding: 0px;
+    }
+  \end{lstlisting}
 \end{multicols}
 \end{document}
