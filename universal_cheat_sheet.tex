@@ -1,15 +1,11 @@
-\documentclass[10pt,landscape,a4paper]{CheatSheet}
+\documentclass[10pt,landscape,a4paper]{cheatsheet}
 \usepackage[ngerman]{babel}
 \usepackage{float}
+\usepackage{xtab}
 \title{Universal Cheat-Sheet} 
 \author{A. C. Hinrichs\\\texttt{adrian.hinrichs@rwth-aachen.de}}
 \date{\today}
 \begin{document}
-\setlength{\premulticols}{1pt}
-\setlength{\postmulticols}{1pt}
-\setlength{\multicolsep}{1pt}
-\setlength{\columnsep}{2pt}
-\begin{multicols}{4}
   \maketitle
   \section{\LaTeX--Tools}
   \subsection{\LaTeX{}mk}
@@ -39,99 +35,98 @@
   \end{lstlisting}
   
   \section{EMACS--Commands}
-\begin{xtabular}{rl}
-  Open File (new or existing) & C-x C-f\\
-  Save file & C-x C-s\\
-  Save file as & C-x C-w\\
-  Toogle Read-Only-Mode &C-x C-q\\
-  \\
-  Change Encoding & C-x RET r \texttt{<ENCODING>}\\
-\end{xtabular}
-\section{Jekyll}
-\subsection{Jekyll starten}
-\begin{lstlisting}[language=bash]
-$ jekyll serve
-\end{lstlisting} % $ %Hack for Math-highlighting
-oder
-\begin{lstlisting}[language=bash]
-$ bundle exec jekyll serve
-\end{lstlisting} % $ %Hack for Math-highlighting
-
-
-\section{Markdown}
-\subsection{Headers}
-\begin{lstlisting}
-  # H1
-  ## H2
-  ### H3
-  #### H4
-  ##### H5
-  ###### H6
-\end{lstlisting}  
- Alternatively, for H1 and H2, an underline-ish style:
-\begin{lstlisting}
-  Alt-H1
-  ======
-  
-  Alt-H2
-  ------
-\end{lstlisting}
-\subsection{Code}
-Inline \lstinline{`code`} has \lstinline{`back-ticks around`} it.\\
-Code-Blocks:
-\begin{lstlisting}
-  ```python
-  s = "Python syntax highlighting"
-  print s
-  ```
-  
-  ```
-  No language indicated, so no syntax highlighting. 
-  But let's throw in a <b>tag</b>.
-  ```
-\end{lstlisting}
-\subsection{Links}
-\begin{lstlisting}
-  [Display Text]({{ site.baseurl }}/pfad/zur/datei.html)
-\end{lstlisting}
-\section{Screen}
-\subsection{Tastaturbefehle}
-Funktionierne in einer Sitzung:
-\begin{table}[H]
-  \footnotesize
   \begin{xtabular}{rl}
-    Ein neues Fenster öffnen& C-a-c\\
-    Zwischen Fenstern wechseln& C-a-SPC\\
-    Sitzung Trennen & C-a-d\\
+    Open File (new or existing) & C-x C-f\\
+    Save file & C-x C-s\\
+    Save file as & C-x C-w\\
+    Toogle Read-Only-Mode &C-x C-q\\
+    \\
+    Change Encoding & C-x RET r \texttt{<ENCODING>}\\
   \end{xtabular}
-\end{table}
-\subsection{Shell-Kommandos}
-Funktionieren ausserhalb von Sitzungen\\
-Zum start einer neuen Sitzung mit dem Namen \texttt{sitzung1}:
-\begin{lstlisting}
-  $ screen -S sitzung1
-\end{lstlisting}%$
-Zu wiederaufnehmen der Sitzung \texttt{\$SITZUNG}:%$
-\begin{lstlisting}
-  $ screen -r $SITZUNG
-\end{lstlisting}%$
-Wenn nur eine Sitzung im hintergrund läuft kann der Sitzungsname weg
-gelassen werden.\\
-Zum auflisten aller Sitzungen:
-\begin{lstlisting}
- $ screen -ls 
-\end{lstlisting}%$
-Zum trennen einer (nicht geöffneten) Sitzung \texttt{\$SITZUNG}:
-\begin{lstlisting}
- $ screen -d $SITZUNG
-\end{lstlisting}
-Spiegeln der Sitzung \texttt{\$SITZUNG}:
-\begin{lstlisting}
- $ screen -rx $SITZUNG
-\end{lstlisting}
-Einen Befehl an die Sitzung \texttt{\$SITZUNG} senden und ausführen:
-\begin{lstlisting}
- $ screen -S $SITZUNG -X stuff $'ls -l\n'
-\end{lstlisting}%$
-\end{multicols}
+  \section{Jekyll}
+  \subsection{Jekyll starten}
+  \begin{lstlisting}[language=bash]
+    $ jekyll serve
+  \end{lstlisting} % $ %Hack for Math-highlighting
+  oder
+  \begin{lstlisting}[language=bash]
+    $ bundle exec jekyll serve
+  \end{lstlisting} % $ %Hack for Math-highlighting
+
+  
+  \section{Markdown}
+  \subsection{Headers}
+  \begin{lstlisting}
+    # H1
+    ## H2
+    ### H3
+    #### H4
+    ##### H5
+    ###### H6
+  \end{lstlisting}  
+  Alternatively, for H1 and H2, an underline-ish style:
+  \begin{lstlisting}
+    Alt-H1
+    ======
+    
+    Alt-H2
+    ------
+  \end{lstlisting}
+  \subsection{Code}
+  Inline \lstinline{`code`} has \lstinline{`back-ticks around`} it.\\
+  Code-Blocks:
+  \begin{lstlisting}
+    ```python
+    s = "Python syntax highlighting"
+    print s
+    ```
+    
+    ```
+    No language indicated, so no syntax highlighting. 
+    But let's throw in a <b>tag</b>.
+    ```
+  \end{lstlisting}
+  \subsection{Links}
+  \begin{lstlisting}
+    [Display Text]({{ site.baseurl }}/pfad/zur/datei.html)
+  \end{lstlisting}
+  \section{Screen}
+  \subsection{Tastaturbefehle}
+  Funktionierne in einer Sitzung:
+  \begin{table}[H]
+    \footnotesize
+    \begin{xtabular}{rl}
+      Ein neues Fenster öffnen& C-a-c\\
+      Zwischen Fenstern wechseln& C-a-SPC\\
+      Sitzung Trennen & C-a-d\\
+    \end{xtabular}
+  \end{table}
+  \subsection{Shell-Kommandos}
+  Funktionieren ausserhalb von Sitzungen\\
+  Zum start einer neuen Sitzung mit dem Namen \texttt{sitzung1}:
+  \begin{lstlisting}
+    $ screen -S sitzung1
+  \end{lstlisting}%$
+  Zu wiederaufnehmen der Sitzung \texttt{\$SITZUNG}:%$
+  \begin{lstlisting}
+    $ screen -r $SITZUNG
+  \end{lstlisting}%$
+  Wenn nur eine Sitzung im hintergrund läuft kann der Sitzungsname weg
+  gelassen werden.\\
+  Zum auflisten aller Sitzungen:
+  \begin{lstlisting}
+    $ screen -ls 
+  \end{lstlisting}%$
+  Zum trennen einer (nicht geöffneten) Sitzung \texttt{\$SITZUNG}:
+  \begin{lstlisting}
+    $ screen -d $SITZUNG
+  \end{lstlisting}
+  Spiegeln der Sitzung \texttt{\$SITZUNG}:
+  \begin{lstlisting}
+    $ screen -rx $SITZUNG
+  \end{lstlisting}
+  Einen Befehl an die Sitzung \texttt{\$SITZUNG} senden und ausführen:
+  \begin{lstlisting}
+    $ screen -S $SITZUNG -X stuff $'ls -l\n'
+  \end{lstlisting}%$
 \end{document}
