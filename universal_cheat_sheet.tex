@@ -33,16 +33,53 @@
     
     \footnotetext{#1} %Appends the text to the footnote
   \end{lstlisting}
-  
-  \section{EMACS--Commands}
-  \begin{xtabular}{rl}
+   
+  \section{EMACS}
+  \subsection{File-Management}
+  \begin{tabular}{rl}
     Open File (new or existing) & C-x C-f\\
     Save file & C-x C-s\\
     Save file as & C-x C-w\\
-    Toogle Read-Only-Mode &C-x C-q\\
+  \end{tabular}
+  \subsection{Buffers}
+  \begin{tabular}{rl}
+    Move to Buffer...&\\
+    ...with name     & C-x b \texttt{<Name>}\\
+    ...next          & C-x \(\rightarrow\)\\
+    ...previous      & C-x \(\leftarrow\)\\
     \\
-    Change Encoding & C-x RET r \texttt{<ENCODING>}\\
-  \end{xtabular}
+    Kill Buffer \texttt{<X>} & C-x k \texttt{<X>}\\
+    \\
+    Toogle Read-Only-Mode &C-x C-q\\
+    Change Encoding  & C-x RET r \texttt{<ENC>}\
+  \end{tabular}
+  \subsection{I-Search}
+  \begin{tabular}{rl}
+    Search forward  & C-s \texttt{<String>}\\
+    Search backward & C-r \texttt{<String>}\\
+    Continue Search & C-s C-s \emph{or}\\
+                    & C-r C-r\\
+  \end{tabular}
+  \subsection{Transpose}
+  \begin{tabular}{rl}
+    Transpose Chars  & C-t\\
+    Transpose Words  & M-t\\
+    Transpose Expressions C-M-t
+  \end{tabular}
+  Example: \(12\underline{3}45\overset{\textrm{C-t}}\longmapsto
+  132\underline{4}5\), where the underline indicates the cursor
+  position.
+  \subsection{Kexboard-Macros}
+  \begin{tabular}{rl}
+    Begin recording & C-x (\\
+    End recording   & C-x )\\
+    Execute Macro   & C-x e\\
+  \end{tabular}
+  \subsection{Uncategorized}
+  \begin{tabular}{rl}
+    Repeat \textrm{<CMD>} \textrm{<N>} times & C-u \textrm{<N>} \textrm{<CMD>}\\
+    Open second (e)shell & C-u M-x eshell
+  \end{tabular}
   \section{Jekyll}
   \subsection{Jekyll starten}
   \begin{lstlisting}[language=bash]
@@ -52,7 +89,6 @@
   \begin{lstlisting}[language=bash]
     $ bundle exec jekyll serve
   \end{lstlisting} % $ %Hack for Math-highlighting
-
   
   \section{Markdown}
   \subsection{Headers}
