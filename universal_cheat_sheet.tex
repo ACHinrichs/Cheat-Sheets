@@ -78,8 +78,27 @@
   \subsection{Uncategorized}
   \begin{tabular}{rl}
     Repeat \textrm{<CMD>} \textrm{<N>} times & C-u \textrm{<N>} \textrm{<CMD>}\\
-    Open second (e)shell & C-u M-x eshell
+    Open second (e)shell & C-u M-x eshell\\
+    Input Unicode Character & C-x 8 RET <ID> 
   \end{tabular}
+  \subsection{Org-Mode}
+  
+  \begin{tabular}{rl}
+    Toggle top-level ToDo & C-c C-t\\
+    Toggle checkbox ToDo  & C-c C-c\\
+    Export (see help-view)& C-c C-e <X> <Y>\\
+  \end{tabular}
+  Syntax:
+  \begin{lstlisting}
+    * Heading
+    ** TODO Display Percentage [%]
+      - [ ] Sub-Todo-Item
+      - [X] Another one
+      - [-] One with sub-tasks [/]
+        - [ ] 1
+        - [X] 2
+        - [ ] 3
+  \end{lstlisting}
   \section{Jekyll}
   \subsection{Jekyll starten}
   \begin{lstlisting}[language=bash]
