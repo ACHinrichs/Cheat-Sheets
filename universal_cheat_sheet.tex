@@ -81,24 +81,24 @@
     Open second (e)shell & C-u M-x eshell\\
     Input Unicode Character & C-x 8 RET <ID> 
   \end{tabular}
-  \subsection{Org-Mode}
-  
+  \section{EMACS Org-Mode}
+  \subsection{Lists}
   \begin{tabular}{rl}
-    Toggle top-level ToDo & C-c C-t\\
+    Insert new item       & M-RET\\
+    Insert new item \& Checkbox & M-S-RET\\
+    De/Increase intendation & M-left/right\\
+    De/Increase tree intedation & M-S-left/right\\
+    Change bullet-style   & C-c -\\
+    Listitem to Headline  & C-c *\\
+    List to Headline-Subtree& C-c C-*\\
+    Sort List             & C-c \^{}\\
     Toggle checkbox ToDo  & C-c C-c\\
+  \end{tabular}
+  \subsection{Uncategorized}
+  \begin{tabular}{rl}
+    Toggle ToDo-Tag & C-c C-t\\
     Export (see help-view)& C-c C-e <X> <Y>\\
   \end{tabular}
-  Syntax:
-  \begin{lstlisting}
-    * Heading
-    ** TODO Display Percentage [%]
-      - [ ] Sub-Todo-Item
-      - [X] Another one
-      - [-] One with sub-tasks [/]
-        - [ ] 1
-        - [X] 2
-        - [ ] 3
-  \end{lstlisting}
   \section{Jekyll}
   \subsection{Jekyll starten}
   \begin{lstlisting}[language=bash]
