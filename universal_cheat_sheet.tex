@@ -184,4 +184,35 @@
   \begin{lstlisting}
     $ screen -S $SITZUNG -X stuff $'ls -l\n'
   \end{lstlisting}%$
+  \section{tar}
+  Basic usage:
+  \lstinline[language=Bash]{$ tar OPTIONS [-f OUTFILE] INFILES}% $ %Hack for Math-highlighting
+  \subsection{Arguments}
+  \begin{table}[H]
+    \footnotesize
+    \begin{xtabular}{rl}
+      -c & \textbf{C}reate new Archive\\
+      -u & \textbf{U}pdate Archive\\
+      -r & Append to Archive\\
+      -x & E\textbf{x}tract\\
+    \end{xtabular}
+  \end{table}
+  \subsubsection{Output}
+  \begin{table}[H]
+    \footnotesize
+    \begin{xtabular}{rl}
+      -f & Specify Output\textbf{f}ile\\
+      -O & Extract to std-\textbf{o}ut\\
+    \end{xtabular}
+  \end{table}
+  \subsubsection{Compression}
+  \begin{table}[H]
+    \footnotesize
+    \begin{xtabular}{rl}
+      -j & Use bzip2\\
+      -J & Use xz\\
+      -z & Use gzip\\
+      -Z & Use compress\\
+    \end{xtabular}
+  \end{table}
 \end{document}
